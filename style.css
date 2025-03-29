@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #f39c12;
+    --black: #0b0b0b;
+}
+
+/* header start */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: var(--orange);
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: background-color 0.8s ease, color 0.8s ease;
+    /* Плавный переход */
+
+}
+
+header h2 {
+    font-size: calc(0.875vw + 15.2px);
+    font-weight: 100;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: var(--black);
+}
+
+@media (max-width:700px) {
+    header {
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 1;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
+/* dropdown start */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: var(--black);
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    background-color: #f39c12;
+    color: var(--black);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--orange);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+/* dropdown end */
+
+/* burger-menu start */
+.burger_menu_side {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo_image {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.burger {
+    cursor: pointer;
+    display: none;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 24px;
+
+}
+
+@media (max-width:768px) {
+    .burger {
+        display: block;
+    }
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #000;
+}
+
+.burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #000;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+
+.burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+}
+
+.burger-checkbox:checked+.burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+
+.burger-checkbox:checked+.burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+}
+
+.burger_menu_wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.burger_menu_wrapper.active {
+    display: flex;
+}
+
+.burger_menu_wrapper.active nav {
+    display: flex;
+    align-items: center;
+}
+
+.burger_menu_wrapper.active ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.burger_menu_wrapper.active ul li {
+    list-style: none;
+}
+
+.burger_menu_wrapper.active ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #FFFFFF;
+}
+
+/* burger-menu end */
+
+.night-mode-img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 1s ease;
+}
+
+.night-mode-img:active {
+    transform: rotate(200deg);
+}
+
+/* header end */

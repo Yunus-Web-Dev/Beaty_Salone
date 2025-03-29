@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beaty | Salone</title>
+    <title>Beauty | Salon</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <header>
+        <h2>Beauty | Salon</h2>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Главная</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Услуги</button>
+                    <ul class="dropdown-content">
+                        <li><a href="./src/pages/HaircutPage/HaircutPage.html">Стрижка</a></li>
+                        <li><a href="./src/pages/ManicurePage/ManicurePage.html">Маникюр</a></li>
+                        <li><a href="./src/pages/ScincarePage/ScincarePage.html">Уход за кожей</a></li>
+                    </ul>
+                </li>
+                <li><a href="./src/pages/AboutUsPage/AboutUsPage.html">О нас</a></li>
+                <li><a href="./src/pages/GalleryPage/GalleryPage.html">Галерея</a></li>
+                <li><a href="./src/pages/ContactsPage/ContactsPage.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="burger_menu_side">
+            <a href="./src/pages/LoginPage/LoginPage.html">
+                <img src="./src/assets/images/registration.png" alt="Регистрация" class="logo_image">
+            </a>
+            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+            <label class="burger" for="burger-checkbox"></label>
+            <img src="./src/assets/images/night.png" alt="Ночной режим" class="night-mode-img" id="changeTheme">
+        </div>
+    </header>
+
+    <div class="burger_menu_wrapper">
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Услуги</button>
+                    <ul class="dropdown-content">
+                        <li><a href="./src/pages/HaircutPage/HaircutPage.html">Стрижка</a></li>
+                        <li><a href="./src/pages/ManicurePage/ManicurePage.html">Маникюр</a></li>
+                        <li><a href="./src/pages/ScincarePage/ScincarePage.html">Уход за кожей</a></li>
+                    </ul>
+                </li>
+                <li><a href="./src/pages/AboutUsPage/AboutUsPage.html">О нас</a></li>
+                <li><a href="./src/pages/GalleryPage/GalleryPage.html">Галерея</a></li>
+                <li><a href="./src/pages/ContactsPage/ContactsPage.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script defer src="./script.js"></script>
 </body>
 </html>
