@@ -110,7 +110,7 @@ header nav ul li a {
 /* dropdown end */
 
 /* burger-menu start */
-.burger_menu_side {
+.burger-menu-container {
     display: flex;
     gap: 20px;
     align-items: center;
